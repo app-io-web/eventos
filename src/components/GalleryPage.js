@@ -70,12 +70,12 @@ const GalleryPage = () => {
                 ? JSON.parse(table.Gif_Uploads)
                 : table.Gif_Uploads;
   
-              mediaInfo.GIFs = gifsData.flatMap(m =>
-                m.GIFs.flatMap(f => f.Fotos.map(gif => ({
+                mediaInfo.GIFs = (gifsData || [])
+                .flatMap(m => (m.GIFs ? m.GIFs.flatMap(f => (f.Fotos ? f.Fotos.map(gif => ({
                   id: gif.id || Math.random().toString(),
                   url: gif.url
-                })))
-              );
+                })) : [])) : []));
+              
             } catch (error) {
               console.error("Erro ao processar JSON de `Gif_Uploads`:", error);
             }
