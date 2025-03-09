@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { HashRouter as Router, Route, Routes } from "react-router-dom"; // 🔹 Troca BrowserRouter por HashRouter
+import GlobalStyle from "./components/GlobalStyles";
+import LoginScreen from "./components/LoginScreen";
+import HomePage from "./components/homePage";
+import GalleryPage from "./components/GalleryPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <Routes>
+        <Route path="/:tableCode" element={<LoginScreen />} />
+        <Route path="/:tableCode/home" element={<HomePage />} />
+        <Route path="/gallery/:tableCode/:username" element={<GalleryPage />} />
+      </Routes>
+    </Router>
   );
 }
 
