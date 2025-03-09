@@ -146,9 +146,9 @@ const handleSubmit = async (e) => {
     }
 
     // ✅ Contabiliza apenas GIFs e vídeos que tenham conteúdo
-    totalMidiasNaMesa += existingGifUploads.filter(gif => gif.GIFs.some(g => g.Fotos.length > 0)).length;
-    totalMidiasNaMesa += existingVideoUploads.filter(video => video.Videos.some(v => v.Arquivos.length > 0)).length;
-
+    totalMidiasNaMesa += existingGifUploads?.filter(gif => gif.GIFs?.some(g => g.Fotos?.length > 0))?.length || 0;
+    totalMidiasNaMesa += existingVideoUploads?.filter(video => video.Videos?.some(v => v.Arquivos?.length > 0))?.length || 0;
+    
     // 🔥 **Bloquear upload se ultrapassar o limite**
     if (totalMidiasNaMesa + files.length > limiterPhotos) {
         alert(`⚠️ O limite de mídias para esta mesa é ${limiterPhotos}. Você já tem ${totalMidiasNaMesa} arquivos e está tentando adicionar ${files.length}. Reduza a seleção!`);
