@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/eventos/static/css/main.e6c13ad2.css",
+    "main.js": "/eventos/static/js/main.ca876f16.js",
+    "static/js/453.e8b00c17.chunk.js": "/eventos/static/js/453.e8b00c17.chunk.js",
+    "static/media/upload.png": "/eventos/static/media/upload.7c11c2c20118cf27b918.png",
+    "static/media/cloudParty.png": "/eventos/static/media/cloudParty.e426d11ddf4d7cb73056.png",
+    "index.html": "/eventos/index.html",
+    "main.e6c13ad2.css.map": "/eventos/static/css/main.e6c13ad2.css.map",
+    "main.ca876f16.js.map": "/eventos/static/js/main.ca876f16.js.map",
+    "453.e8b00c17.chunk.js.map": "/eventos/static/js/453.e8b00c17.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.ca876f16.js"
+  ]
+}
